@@ -7,7 +7,7 @@ RUN sudo sh -c 'apt-get update && apt-get install -y --force-yes unzip expect gi
 
 # Install Android SDK
 
-RUN sudo sh -c 'cd /opt && wget --output-document=android-ndk.zip --quiet https://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip && unzip android-ndk.zip'
+RUN sudo sh -c 'cd /opt && wget --output-document=android-ndk.zip --quiet https://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip && unzip android-ndk.zip && rm android-ndk.zip'
 
 ENV ANDROID_NDK /opt/android-ndk-r12b
 
